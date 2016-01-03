@@ -11,7 +11,7 @@
     </brs:input>
     <brs:output namespace="http://wso2.brs.org/bank/verifyApplicant" wrapperElementName="applicantRequestResponse">
       <brs:fact elementName="applicantRequestResponse"
-        namespace="http://wso2.brs.org/bank/verifyApplicant/response" type="org.wso2.brs.sample.RequestAccept"/>
+        namespace="http://wso2.brs.org/bank/verifyApplicant/response" type="org.wso2.brs.sample.ResponseMessage"/>
     </brs:output>
   </brs:operation>
 </brs:ruleService>
