@@ -2,14 +2,15 @@ package org.wso2.brs.sample;
 
 public class LoanRequest {
 
-	private String applicantFName;
-	private String applicantLName;
-	private int applicantAge;
-	private Double applicantSalary;
+	private String applicantFName;	//First name of the applicant
+	private String applicantLName;	//Last name of the applicant
+	private int applicantAge;	//Applicants age
+	private Double applicantSalary;	//Applicants salary
 	
-	private Double loanAmount;
-	private Float loanInterest;
+	private Double loanAmount;	//Requested loan amount
+	private Float loanInterest;	//Requested interest
 	
+	//Getters
 	public String getApplicantFName () {
 		return applicantFName;
 	}
@@ -34,6 +35,7 @@ public class LoanRequest {
 		return loanInterest;
 	}
 	
+	//Setters
 	public void setApplicantFName (String applicantFName) {
 		this.applicantFName = applicantFName;		
 	}

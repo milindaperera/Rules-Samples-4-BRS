@@ -1,5 +1,4 @@
-<project name="OrderApprovalService" basedir="." default="main">
-    <property name="BRS_HOME" value="../../"/>
+<project name="LoanApprovalService" basedir="." default="main">
     <property name="build.dir" value="build"/>
 
     <target name="clean">
@@ -31,10 +30,5 @@
             </fileset>
         </jar>
     </target>
-    <!--target name="deploy.service" depends="generate.service">
-        <copy file="${build.dir}/OrderApprovalService.aar"
-              todir="${BRS_HOME}/repository/deployment/server/ruleservices/"
-              overwrite="yes"/>
-    </target-->
     <target name="main" depends="clean,generate.service"/>
 </project>
