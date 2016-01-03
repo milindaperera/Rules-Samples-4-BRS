@@ -1,0 +1,17 @@
+<brs:ruleService name="bankService" scope="Request"
+  targetNamespace="http://wso2.brs.org/Sample" xmlns:brs="http://wso2.org/carbon/rules">
+  <brs:ruleSet>
+    <brs:properties/>
+    <brs:rule description="verify applicant" resourceType="regular" sourceType="file">Sample.drl</brs:rule>
+  </brs:ruleSet>
+  <brs:operation name="verifyApplicant">
+    <brs:input namespace="http://wso2.brs.org/bank/verifyApplicant" wrapperElementName="applicantRequest">
+      <brs:fact elementName="applicantRequest"
+        namespace="http://wso2.brs.org/bank/verifyApplicant/request" type="org.wso2.brs.sample.LoanRequest"/>
+    </brs:input>
+    <brs:output namespace="http://wso2.brs.org/bank/verifyApplicant" wrapperElementName="applicantRequestResponse">
+      <brs:fact elementName="applicantRequestResponse"
+        namespace="http://wso2.brs.org/bank/verifyApplicant/response" type="org.wso2.brs.sample.RequestAccept"/>
+    </brs:output>
+  </brs:operation>
+</brs:ruleService>

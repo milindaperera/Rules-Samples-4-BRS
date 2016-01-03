@@ -1,0 +1,28 @@
+package org.wso2.brs.sample;
+ 
+import org.wso2.brs.sample.LoanRequest;
+import org.wso2.brs.sample.RequestAccept;
+ 
+rule "Loan Approval"
+    when
+        $request : LoanRequest( applicantSalary  > 1000);
+    then
+        //System.out.println( "***********ACCEPT REQUEST*************" );
+        RequestAccept response = new RequestAccept();
+        response.setMessage("Loan Request ACCEPTED");
+        insertLogical(response); 
+        //RequestAccept response2 = new RequestAccept();
+        //response2.setMessage("Loan Request ACCEPTED2");
+        //insertLogical(response2);
+        //retract(response2); 
+end
+
+rule "Loan Reject"
+	when
+	 	$request : LoanRequest( applicantAge   < 18);
+	then
+		//System.out.println( "***********REJECT REQUEST*************" );
+        	RequestAccept response = new RequestAccept();
+        	response.setMessage("Loan Request ACCEPTED but age mismatch");
+		insertLogical(response);
+end
